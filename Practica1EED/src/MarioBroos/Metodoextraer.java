@@ -11,13 +11,14 @@ package MarioBroos;
  * @author William
  */
 public class Metodoextraer extends javax.swing.JFrame {
-
+public static Pila pila= new Pila();
+public static Cola cola= new Cola();
     /**
      * Creates new form Metodoextraer
      */
     public Metodoextraer() {
         initComponents();
-    }
+    }  
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -85,14 +86,27 @@ public class Metodoextraer extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(jTextField1.getText().equalsIgnoreCase("Pila")){
-        
+        objeto aux=listadeobjetos.primero;
+        int conteo=0;
+        while(conteo<=listadeobjetos.tamaño){
+         conteo++;
+        pila.puch(aux);
+        aux=aux.punterosiguiente;
+         }
         }
         else if(jTextField1.getText().equalsIgnoreCase("cola")){
-        
+        objeto aux=listadeobjetos.primero;
+        int contador=0;
+        while(contador<=listadeobjetos.tamaño){
+        contador++;
+        cola.encolar(aux);
+        aux=aux.punterosiguiente;
+        }
         }
         else{
         jTextField1.setText("ingrese pila o cola");
         }
+        new prejuego().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

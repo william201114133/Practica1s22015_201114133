@@ -13,7 +13,7 @@ package MarioBroos;
 public class listadeobjetos {
    public static objeto primero;
    public static objeto ultimo;
-   int tamaño=0;
+   public static int tamaño=0;
    
    public boolean add(String nombre, String imagen) {
     if(primero==null){
