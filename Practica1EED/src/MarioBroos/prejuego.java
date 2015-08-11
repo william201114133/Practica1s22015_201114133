@@ -17,6 +17,19 @@ public class prejuego extends javax.swing.JFrame {
      */
     public prejuego() {
         initComponents();
+        MatrizOrtogonal mapa = new MatrizOrtogonal();
+        mapa.nuevaColumna();
+        mapa.nuevaFila();
+        mapa.Agregar(1, 1, new Posicion(1,1));
+        mapa.nuevaColumna();
+        mapa.nuevaFila();
+        mapa.Agregar(2, 1, new Posicion(2,1));
+        mapa.Agregar(1, 2, new Posicion(1,2));
+        mapa.Agregar(2, 2, new Posicion(2,2));
+        mapa.nuevaColumna();
+        mapa.Agregar(3,1, new Posicion(3,1));
+        mapa.Agregar(3,2, new Posicion(3,2));
+        mapa.imprimirse();
     }
 
     /**

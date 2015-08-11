@@ -109,4 +109,19 @@ public class MatrizOrtogonal {
         }
         columnas --;
     }
+    public void imprimirse(){
+        Posicion auxiliar = inicio;
+        Posicion auxiliar2 = inicio;
+        int i = 0;
+        while (auxiliar2 != null) {
+            while (auxiliar != null) {
+                System.out.print(" (" + auxiliar.horizontal + "," + auxiliar.vertical + ")  ,");
+                auxiliar = auxiliar.derecha;
+            }
+            System.out.print("\n");
+            auxiliar2 = auxiliar2.abajo;
+            auxiliar = auxiliar2;
+            i ++;
+        }
+    }
 }
